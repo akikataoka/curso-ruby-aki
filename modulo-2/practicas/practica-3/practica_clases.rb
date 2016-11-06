@@ -12,8 +12,8 @@ class Persona
   end
 
   #La clase debe tener tener un search por apellido
-  def self.search(apellido)
-    #puts "search method invoked!"
+  def self.buscar(apellido)
+    #puts "search method invoked!"ba
     @@personasArr.select{ |persona| persona.apellido.downcase == apellido.downcase }
   end
 

@@ -1,0 +1,20 @@
+<h1>Recipes#search</h1>
+
+<center>
+  <table border="1">
+    <tr>
+      <th>Imagen</th>
+      <th>Publisher</th>
+      <th>Title</th>
+      <th>Recipe</th>
+    </tr>
+    <% @recipes.each do |recipe| %>
+      <tr class=<%= cycle('even', 'odd') %>>
+        <td><%= image_tag(recipe["image_url"], size: "100x100") %></td>
+        <td><%= recipe['publisher'] %></td>
+        <td><%= recipe['title'] %></td>
+        <td><%= link_to('Ver la receta', recipe['source_url'], :target => "_blank") %></td>
+      </tr>
+    <% end %>
+  </table>
+</center>
